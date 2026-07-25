@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPWS — Strategic War Planning System</title>
+  <meta name="description" content="Painel inicial do SPWS para organização de operações no Tribal Wars.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">⚔</div>
+        <div>
+          <strong>SPWS</strong>
+          <span>War System</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="new-op">⚔ <span>Nova operação</span></button>
+        <button class="nav-item" data-view="operations">▤ <span>Operações</span></button>
+        <button class="nav-item" data-view="targets">◎ <span>Alvos</span></button>
+        <button class="nav-item" data-view="players">♟ <span>Jogadores</span></button>
+        <button class="nav-item" data-view="messages">✉ <span>Mensagens</span></button>
+        <button class="nav-item" data-view="reports">▥ <span>Relatórios</span></button>
+        <button class="nav-item" data-view="settings">⚙ <span>Configurações</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span>SPWS Alpha 0.0.1</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
+        <div>
+          <p class="eyebrow">Senta a Pua</p>
+          <h1 id="pageTitle">Centro de Comando</h1>
+        </div>
+        <button class="profile-button" id="profileButton" title="Perfil do usuário">
+          <span class="avatar">T</span>
+          <span class="profile-copy">
+            <strong>Tatoom</strong>
+            <small>Líder</small>
+          </span>
+        </button>
+      </header>
+
+      <section id="view-dashboard" class="view active-view">
+        <div class="hero">
+          <div>
+            <span class="live-badge">● OPERAÇÃO ATIVA</span>
+            <h2>Operação Ragnarok</h2>
+            <p>Próxima janela operacional: <strong>Hoje, 20:00</strong></p>
+          </div>
+          <button class="primary-button" data-view="new-op">+ Nova operação</button>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span>Participantes</span>
+            <strong>18</strong>
+            <small>16 confirmados</small>
+          </article>
+          <article class="metric-card">
+            <span>Alvos</span>
+            <strong>12</strong>
+            <small>3 prioritários</small>
+          </article>
+          <article class="metric-card">
+            <span>Comandos</span>
+            <strong>74</strong>
+            <small>52 fulls · 22 NT</small>
+          </article>
+          <article class="metric-card warning">
+            <span>Pendências</span>
+            <strong>4</strong>
+            <small>Requer atenção</small>
+          </article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Visão operacional</p>
+                <h3>Progresso da OP</h3>
+              </div>
+              <button class="text-button" data-view="operations">Ver operação</button>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-label"><span>Confirmações</span><strong>16/18</strong></div>
+              <div class="progress-track"><div class="progress-bar" style="width:88.9%"></div></div>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-label"><span>Ordens distribuídas</span><strong>74/74</strong></div>
+              <div class="progress-track"><div class="progress-bar" style="width:100%"></div></div>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-label"><span>Comandos enviados</span><strong>41/74</strong></div>
+              <div class="progress-track"><div class="progress-bar" style="width:55.4%"></div></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Últimas atividades</p>
+                <h3>Movimentação recente</h3>
+              </div>
+            </div>
+            <ul class="activity-list">
+              <li><span class="activity-icon ok">✓</span><div><strong>Bermúdez confirmou</strong><small>há 3 min</small></div></li>
+              <li><span class="activity-icon ok">✓</span><div><strong>Tatoom confirmou</strong><small>há 7 min</small></div></li>
+              <li><span class="activity-icon alert">!</span><div><strong>Skagen solicitou ajuste</strong><small>há 12 min</small></div></li>
+              <li><span class="activity-icon">⚔</span><div><strong>OP Ragnarok criada</strong><small>hoje, 10:42</small></div></li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="quick-actions">
+          <h3>Acesso rápido</h3>
+          <div class="action-grid">
+            <button class="action-card" data-view="new-op"><span>⚔</span><strong>Nova operação</strong><small>Criar e distribuir uma OP</small></button>
+            <button class="action-card" data-view="targets"><span>◎</span><strong>Importar alvos</strong><small>Colar lista de coordenadas</small></button>
+            <button class="action-card" data-view="players"><span>♟</span><strong>Gerenciar jogadores</strong><small>Editar participantes e funções</small></button>
+            <button class="action-card" data-view="messages"><span>✉</span><strong>Gerar mensagens</strong><small>MP, WhatsApp e e-mail</small></button>
+          </div>
+        </section>
+      </section>
+
+      <section id="view-placeholder" class="view">
+        <div class="placeholder panel">
+          <span class="placeholder-icon" id="placeholderIcon">⚔</span>
+          <h2 id="placeholderTitle">Nova operação</h2>
+          <p id="placeholderText">Esta área será construída na próxima etapa.</p>
+          <button class="secondary-button" data-view="dashboard">Voltar ao Dashboard</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
